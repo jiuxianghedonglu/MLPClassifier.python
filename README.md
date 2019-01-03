@@ -18,5 +18,4 @@
 
 2. Run [exapmle](https://github.com/jiuxianghedonglu/MLP-Classifier/blob/master/expample.py)
 
-3. Training log of example:
-![](https://github.com/jiuxianghedonglu/MLP-Classifier/blob/master/mnist_example.png)
+3. [Training log of example](https://github.com/jiuxianghedonglu/MLP-Classifier/blob/master/mnist_example.png)
