@@ -6,6 +6,8 @@
 - output layer activation is softmax
 - loss function is cross-entropy
 - support save and load model weights
+- setting hidden layers by paramater "hidden_sizes", examples: hidden_sizes=(100,),there is a hidden layer of 100 neurons;
+hidden_sizes=(100,50),there are two hidden layers, 100 and 200 neurons.
 
 # Example:
 
