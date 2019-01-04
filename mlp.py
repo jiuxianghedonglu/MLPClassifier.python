@@ -8,8 +8,10 @@
 import numpy as np
 import pickle
 
+
 def sigmoid(x):
     return 1/(1+np.exp(-x))
+
 
 def softmax(x):
     exp_x = np.exp(x)
@@ -105,9 +107,13 @@ class MLP(object):
             self.parameters[key] += v[key]
         return v
 
-    def fit(self, x, y, val_x=None, val_y=None, batch_size=32, epochs=100, shuffle=False, lr=1e-2, momentum=0):
+    def fit(self, x, y, val_x=None, val_y=None, batch_size=32, epochs=100, lr=1e-2, momentum=0):
         n = x.shape[0]
+        indexs = np.arange(x.shape[0])
         for e in range(1, epochs+1):
+            np.random.shuffle(indexs)
+            x = x[indexs]
+            y = y[indexs]
             for i in range(0, n, batch_size):
                 batch_x = x[i:i+batch_size]
                 batch_y_true = y[i:i+batch_size]
